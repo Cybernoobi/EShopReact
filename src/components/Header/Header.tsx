@@ -1,5 +1,6 @@
 import "./Header.scss"
-import {Link} from "react-router";
+import { Link, NavLink } from "react-router";
+import Btn, {Sizes, Types} from "../UI/Btn.tsx";
 
 const Header = () => {
   return (
@@ -11,16 +12,20 @@ const Header = () => {
             CyberBazar
           </Link>
         </div>
-        <div className="header__search">
-          <input className="header__search-input" placeholder="Search"/>
-          <button className="header__search-submit">Search</button>
-        </div>
+        <form className="header__search" role="search">
+          <input className="header__search-input" placeholder="Search" autoFocus/>
+          <Btn size={Sizes.small} type={Types.submit} className="header__search-submit">Search</Btn>
+        </form>
         <div className="header__icons">
           <a href="/favorites" className="header__icons-favorites"><img src="/icons/heart.svg" alt="heart icon"/></a>
           <div className="header__icons-bag">
-            <button className="header__icons-bag-icon"><img src="/icons/bag.svg" alt="bag icon"/></button>
+            <button className="header__icons-bag-icon">
+              <img src="/icons/bag.svg" alt="bag icon"/>
+              <span className="header__icons-bag-icon_num">2</span>
+            </button>
+
             <div className="header__icons-bag-content">
-              <span>Shopping cart</span>
+              <span>Shopping cart: </span>
               <span>$57.00</span>
             </div>
           </div>
@@ -29,12 +34,12 @@ const Header = () => {
       <nav className="header__nav">
         <div className="container">
           <ul className="header__nav-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/shop">Shop</a></li>
-            <li><a href="/pages">Pages</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/shop">Shop</NavLink></li>
+            <li><NavLink to="/pages">Pages</NavLink></li>
+            <li><NavLink to="/blog">Blog</NavLink></li>
+            <li><NavLink to="/about">About Us</NavLink></li>
+            <li><NavLink to="/contact">Contact Us</NavLink></li>
           </ul>
           <div className="header__nav-phone">
             <a href="tel:(219) 555-0114" className="header__nav-phone-number">
