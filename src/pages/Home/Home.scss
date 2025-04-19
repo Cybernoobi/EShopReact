@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  min-width: 0;
+  &__slider {
+    text-align: center;
+  }
+}
