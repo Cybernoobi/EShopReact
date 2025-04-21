@@ -94,3 +94,15 @@
     background: var(--branding-success-dark);
   }
 }
+
+.green {
+  color: var(--branding-success);
+}
+
+.sale {
+  color: var(--branding-warning);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+}
