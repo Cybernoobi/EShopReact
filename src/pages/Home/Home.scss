@@ -6,11 +6,9 @@
     user-select: none;
     transform: translateY(-10px);
     border-radius: 8px;
-    z-index: 9999;
+    z-index: 99;
 
     &-content {
-      position: relative;
-      text-align-last: left;
       height: 804px;
       background: var(--gren-gray-scale-50);
       border-radius: 8px;
